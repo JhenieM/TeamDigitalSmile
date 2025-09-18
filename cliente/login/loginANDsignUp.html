@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <title>Loading Page | AILA</title>
+    <!-- <link rel="shortcut icon" href="../assets/img/logos/logo-dark.png" type="image/x-icon"> -->
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form action="../agendamento.html" name="registro" autocomplete="off">
+            <h1>CADASTRO</h1>
+            <input type="text" placeholder="Username" id="username" name="username" value="username"  required>
+            <input type="email" placeholder="Email" id="email" name="email" value="email"  required>
+            <input type="password" placeholder="Senha" id="senha" name="senha" value="senha"  required>
+            
+            <button type="submit" name="register">Cadastro</button>
+            <p>Já possui conta? <a href="#" id="linkLogin">Entre</a></p>
+        </form>
+    </div>
+
+    <div class="form-container sign-in">
+        <form action="../agendamento.html" method="POST">
+          <h1>LOGIN</h1>
+          <input type="email" placeholder="Email" id="email" name="email" value="email"  required>
+          <input type="password" placeholder="Senha" id="senha" name="senha" value="senha"  required>
+           
+          <button type="submit" name="login">Login</button>
+          <p>Não possui conta? <a href="#" id="linkCadastro">Cadastre-se</a></p>
+        </form>
+    </div>
+
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <img src="../assets/img/logos/logo-aila/logo-white.png" alt="">
+                <span>Já possui conta?</span>
+                <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <img src="../assets/img/logos/logo-aila/logo-white.png" alt="">
+                <span>Não possui conta?</span>
+                <button class="hidden" id="register">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer><p>&copy; <?php echo date("Y"); ?> Copyright AILA</p></footer>
+</body>
+</html>
