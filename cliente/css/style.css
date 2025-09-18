@@ -1,0 +1,144 @@
+body {
+    font-family: Inter, system-ui, Arial;
+    background: #f6f7fb;
+    color: #111;
+}
+
+/* Header Style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background: #efefef;
+  color: #fff;
+}
+
+div img {
+  height: 50px;
+}
+
+nav a {
+  color: #121212;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.container {
+    max-width: 900px;
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(20, 20, 40, 0.06);
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+    padding: 8px 10px;
+    border: 1px solid #d7dbe6;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+textarea {
+    min-height: 70px;
+    resize: vertical;
+    grid-column: span 2;
+}
+
+.full {
+    grid-column: span 2;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    grid-column: span 2;
+}
+
+button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid #d7dbe6;
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.msg.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #bbf7d0;
+}
+
+.msg.error {
+    background: #fff1f2;
+    color: #7f1d1d;
+    border: 1px solid #fecaca;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #eef1f6;
+    font-size: 0.95rem;
+}
+
+.small {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+@media (max-width:720px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    textarea,
+    .full,
+    .actions {
+        grid-column: auto;
+    }
+}
