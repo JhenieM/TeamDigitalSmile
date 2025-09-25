@@ -11,11 +11,16 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form action="../agendamento.html" name="registro" autocomplete="off">
+        <form action="process/processamento.php" name="registro" autocomplete="off">
             <h1>CADASTRO</h1>
-            <input type="text" placeholder="Username" id="username" name="username" value="username"  required>
-            <input type="email" placeholder="Email" id="email" name="email" value="email"  required>
-            <input type="password" placeholder="Senha" id="senha" name="senha" value="senha"  required>
+            <input type="text" placeholder="Nome de Usuário" id="username" name="username" required>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+            <input type="password" placeholder="Senha" id="senha" name="senha" required>
+            <select name="acesso" required>
+                <option value="paciente" selected>Paciente</option>
+                <option value="recepcao">Recepção</option>
+                <option value="adm">Administrador</option>
+            </select>
             
             <button type="submit" name="register">Cadastro</button>
             <p>Já possui conta? <a href="#" id="linkLogin">Entre</a></p>
@@ -23,10 +28,15 @@
     </div>
 
     <div class="form-container sign-in">
-        <form action="../agendamento.html" method="POST">
+        <form action="process/processamento.php" method="POST">
           <h1>LOGIN</h1>
-          <input type="email" placeholder="Email" id="email" name="email" value="email"  required>
-          <input type="password" placeholder="Senha" id="senha" name="senha" value="senha"  required>
+          <input type="email" placeholder="Email" id="email" name="email" required>
+          <input type="password" placeholder="Senha" id="senha" name="senha" required>
+            <select name="acesso" required>
+                <option value="paciente" name="acesso" selected>Paciente</option>
+                <option value="recepcao" name="acesso">Recepção</option>
+                <option value="adm" name="acesso">Administrador</option>
+            </select>
            
           <button type="submit" name="login">Login</button>
           <p>Não possui conta? <a href="#" id="linkCadastro">Cadastre-se</a></p>
@@ -36,18 +46,19 @@
     <div class="toggle-container">
         <div class="toggle">
             <div class="toggle-panel toggle-left">
-                <img src="../assets/img/logos/logo-aila/logo-white.png" alt="">
+                <!-- <img src="../assets/img/logos/logo-aila/logo-white.png" alt=""> -->
                 <span>Já possui conta?</span>
                 <button class="hidden" id="login">Sign In</button>
             </div>
             <div class="toggle-panel toggle-right">
-                <img src="../assets/img/logos/logo-aila/logo-white.png" alt="">
+                <!-- <img src="../assets/img/logos/logo-aila/logo-white.png" alt=""> -->
                 <span>Não possui conta?</span>
                 <button class="hidden" id="register">Sign Up</button>
             </div>
         </div>
     </div>
 </div>
+
 <footer><p>&copy; <?php echo date("Y"); ?> Copyright AILA</p></footer>
 </body>
 </html>
