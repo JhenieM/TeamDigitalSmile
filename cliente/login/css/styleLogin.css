@@ -111,6 +111,35 @@ body {
 .container.active .sign-in {
     transform: translateX(100%);
 }
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #eee url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+    background-size: 16px;
+    border-radius: 12px;
+    padding: 10px 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #357ab8;
+}
+
+select:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+option {
+    font-size: 16px;
+    padding: 5px;
+}
 
 .sign-up {
     left: 0;
