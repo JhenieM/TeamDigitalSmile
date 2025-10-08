@@ -11,16 +11,11 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form action="process/processamento.php" name="registro" autocomplete="off">
+        <form action="#" method="POST" autocomplete="off">
             <h1>CADASTRO</h1>
             <input type="text" placeholder="Nome de Usuário" id="username" name="username" required>
             <input type="email" placeholder="Email" id="email" name="email" required>
             <input type="password" placeholder="Senha" id="senha" name="senha" required>
-            <select name="acesso" required>
-                <option value="paciente" selected>Paciente</option>
-                <option value="recepcao">Recepção</option>
-                <option value="adm">Administrador</option>
-            </select>
             
             <button type="submit" name="register">Cadastro</button>
             <p>Já possui conta? <a href="#" id="linkLogin">Entre</a></p>
@@ -28,7 +23,7 @@
     </div>
 
     <div class="form-container sign-in">
-        <form action="process/processamento.php" method="POST">
+        <form action="process/processamento.php" method="POST" autocomplete="off">
           <h1>LOGIN</h1>
           <input type="email" placeholder="Email" id="email" name="email" required>
           <input type="password" placeholder="Senha" id="senha" name="senha" required>
