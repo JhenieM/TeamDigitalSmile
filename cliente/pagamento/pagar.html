@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Finalizar Pagamento</h2>
+
+    <div class="info">
+      <p><strong>Serviço:</strong> Atendimento odontológico</p>
+      <p><strong>Valor:</strong> R$ 150,00</p>
+    </div>
+
+    <p>Escolha a forma de pagamento:</p>
+    <div class="metodos">
+      <div class="metodo">Cartão</div>
+      <div class="metodo">Pix</div>
+      <div class="metodo">Dinheiro</div>
+    </div>
+
+    <div class="dados-cartao">
+      <label>Número do cartão</label>
+      <input type="text" placeholder="0000 0000 0000 0000">
+
+      <label>Nome no cartão</label>
+      <input type="text" placeholder="Como está impresso no cartão">
+
+      <div style="display:flex; gap:10px;">
+        <div style="flex:1">
+          <label>Validade</label>
+          <input type="text" placeholder="MM/AA">
+        </div>
+        <div style="flex:1">
+          <label>CVV</label>
+          <input type="text" placeholder="123">
+        </div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="alert('Pagamento confirmado com sucesso!')">Confirmar Pagamento</button>
+    <a href="meus_agendamentos.html" class="voltar">← Voltar para Meus Agendamentos</a>
+  </div>
+</body>
+</html>
