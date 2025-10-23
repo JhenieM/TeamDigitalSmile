@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             header("Location: ../../cliente/agendamento.html");
             exit;
         case 'recepcao':
-            header('Location: ../../../recepcao/agendar.html');
+            header('Location: ../../recepcao/inicio_recepcao.html');
             exit;
     }
 }
