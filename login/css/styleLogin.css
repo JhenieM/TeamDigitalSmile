@@ -248,13 +248,6 @@ option {
     transform: translateX(200%);
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    margin: 10px;
-    font-size: 14px;
-}
-
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
