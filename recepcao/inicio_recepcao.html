@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOME | Recepção</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../assets/css/global.css">
 </head>
 <body>
   <div class="container">
     <label for="modal-paciente" class="btn">Pacientes</label>
     <label for="modal-profissional" class="btn">Profissionais</label>
+    <!-- <label for="modal-relatório" class="btn">Relatórios</label> -->
   </div>
 
   <!-- Checkbox - CSS -->
@@ -18,13 +20,14 @@
   <div class="modal">
     <div class="modal-content">
       <h2>Pacientes</h2>
-      <a href="#">Agendar Consulta</a>
-      <a href="#">Ver Consultas</a>
+      <a href="sections/agendar/agendar.html">Agendar Consulta</a>
+      <a href="sections/ver-agendamento/consultas_agendadas.html">Ver Consultas Agendadas</a>
       <a href="#">Gerar Relatório</a>
       <label for="modal-paciente" class="close-btn">Fechar</label>
     </div>
   </div>
 
+  
   <!-- PROFISSIONAL -->
   <input type="checkbox" id="modal-profissional" class="modal-toggle">
   <div class="modal">
@@ -35,5 +38,21 @@
       <label for="modal-profissional" class="close-btn">Fechar</label>
     </div>
   </div>
+
+  <!-- RELATÓRIOS
+  <input type="checkbox" id="modal-relatório" class="modal-toggle">
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Relatórios</h2>
+      <a href="#">Gerar novo relatório</a>
+      <a href="#">Ver relatórios</a>
+      <label for="modal-relatório" class="close-btn">Fechar</label>
+    </div>
+  </div> -->
+
+  <footer>
+    <p>&copy; 2025 Clínica Team Digital Smile — Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
