@@ -1,47 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html, body {
+  height: 100%;
   background: linear-gradient(135deg, #eaf2f8, #cde1f3);
+  display: flex;
+  flex-direction: column;
+  color: #333;
 }
 
 .container {
+  flex: 1;
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .btn {
   background: #2d6bb2;
-  color: #fff;
-  padding: 16px 40px;
+  color: white;
+  padding: 1.2rem 2.5rem;
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
-  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   user-select: none;
 }
 
 .btn:hover {
   background: #1d4e80;
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Esconde os checkboxes */
+/* MODAL */
 .modal-toggle {
   display: none;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -51,54 +50,61 @@ body {
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-/* Mostra o modal */
 .modal-toggle:checked + .modal {
   opacity: 1;
   pointer-events: all;
 }
 
 .modal-content {
-  background: #fff;
-  padding: 30px 40px;
+  background: white;
+  padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
   min-width: 300px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.3s ease;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.3s ease;
 }
 
 .modal-content h2 {
-  margin-bottom: 20px;
   color: #2d6bb2;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #2d6bb2;
+  padding-bottom: 0.5rem;
 }
 
 .modal-content a {
   display: block;
   background: #2d6bb2;
-  color: #fff;
-  padding: 10px;
-  margin: 8px 0;
+  color: white;
+  padding: 0.8rem;
+  margin: 10px 0;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .modal-content a:hover {
   background: #1d4e80;
+  transform: scale(1.05);
 }
 
+/* Botão fechar */
 .close-btn {
   display: inline-block;
+  margin-top: 1rem;
   background: #aaa;
-  color: #fff;
-  padding: 8px 18px;
+  color: white;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
-  margin-top: 20px;
   cursor: pointer;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -106,7 +112,15 @@ body {
   background: #888;
 }
 
-@keyframes fadeIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
