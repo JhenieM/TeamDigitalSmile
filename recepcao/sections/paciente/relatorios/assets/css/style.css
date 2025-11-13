@@ -1,0 +1,48 @@
+body {
+    font-family: "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+.container {
+    margin: 40px;
+    border: 1px solid #ddd;
+    padding: 40px;
+}
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    width: 70px;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+.container > p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.assinatura {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.assinatura hr {
+    width: 60%;
+    margin: 10px auto;
+    border: none;
+    border-top: 1px solid #000;
+}

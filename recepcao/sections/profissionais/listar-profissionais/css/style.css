@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2d6bb2;
+}
+
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #2d6bb2;
+    color: #fff;
+}
+
+.acoes button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background: #f0ad4e;
+}
+
+.btn-deletar {
+    background: #d9534f;
+}
+
+.navegar {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.navegar a {
+    text-decoration: none;
+    color: #2d6bb2;
+    font-weight: bold;
+}
+
+.navegar a:hover {
+    text-decoration: underline;
+}
+
+.search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}

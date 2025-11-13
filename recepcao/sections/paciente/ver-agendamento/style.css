@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+/* === SEÇÃO DE PESQUISA E FILTRO === */
+.pesquisa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  gap: 1rem;
+}
+
+.search-div {
+  flex: 1;
+}
+
+.search {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.search:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.confirmar-div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+#confirm_cancelamento {
+  width: 18px;
+  height: 18px;
+  accent-color: #ffc107; /* amarelo bonito */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#confirm_cancelamento:hover {
+  transform: scale(1.1);
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.agendamento {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+}
+.agendamento h3 {
+    margin: 0 0 0.5rem;
+    color: #007bff;
+}
+.agendamento p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+}
+.botoes {
+    margin-top: 0.8rem;
+}
+.btn {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+    color: rgb(238, 238, 238);
+}
+.btn-r {
+    background-color: var(--azul-claro);
+}
+.btn-cancelar {
+    background: #dc3545;
+}.btn-confirmar-cancelamento {
+    background: #ff8b23;
+}
+.btn-cancelar:hover {
+    background: #c82333;
+}
+.btn-confirmar-cancelamento:hover {
+    background: #f87a0c;
+}
+
+/* Modal */
+#modal {
+    display: none;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.modal-content h3 {
+    color: #007bff;
+    margin-bottom: 0.8rem;
+}
+.modal-content input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+.modal-content .btn-confirmar {
+    background: #28a745;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.modal-content .fechar {
+    display: block;
+    margin-top: 1rem;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
