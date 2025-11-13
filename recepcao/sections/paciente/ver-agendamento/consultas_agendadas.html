@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../../../assets/css/global.css">
+  <title>Consultas Agendadas</title>
+</head>
+<body>
+  <header>
+    <h1>Consultas Agendadas</h1>
+  </header>
+
+  <main>
+    <!-- PESQUISA e FILTROS -->
+    <div class="pesquisa">
+      <div class="search-div">
+        <input type="text" class="search" id="cpfBusca" placeholder="Pesquisa por CPF...">
+      </div>
+      <div class="confirmar-div">
+        <input type="checkbox" name="confirm_cancelamento" id="confirm_cancelamento"> Confirmar Cancelamento
+      </div>
+    </div>
+
+    <!-- CONSULTAS FICTÍCIAS -->
+    <div id="listaConsultas">
+      <div class="agendamento">
+        <h3>Avaliação Inicial</h3>
+        <p><strong>Nome:</strong> Maria Oliveira</p>
+        <p><strong>CPF:</strong> 123.456.789-00</p>
+        <p><strong>Telefone:</strong> (11) 98888-1234</p>
+        <p><strong>Profissional:</strong> Dra. Ana Costa</p>
+        <p><strong>Data:</strong> 12/11/2025 às 14:00</p>
+        <p><strong>Observações:</strong> <i>(Nenhuma)</i></p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Limpeza Dental</h3>
+        <p><strong>Nome:</strong> João da Silva</p>
+        <p><strong>CPF:</strong> 987.654.321-00</p>
+        <p><strong>Telefone:</strong> (11) 97777-6543</p>
+        <p><strong>Profissional:</strong> Dr. Carlos Souza</p>
+        <p><strong>Data:</strong> 15/11/2025 às 10:30</p>
+        <p><strong>Observações:</strong> Sensibilidade nos dentes superiores.</p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Canal Dentário</h3>
+        <p><strong>Nome:</strong> Ana Rodrigues</p>
+        <p><strong>Telefone:</strong> (21) 95555-1111</p>
+        <p><strong>Profissional:</strong> Dra. Beatriz Melo</p>
+        <p><strong>Data:</strong> 16/11/2025 às 09:00</p>
+        <p><strong>Observações:</strong> Dor intensa no molar esquerdo.</p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Clareamento Dental</h3>
+        <p><strong>Nome:</strong> Pedro Lima</p>
+        <p><strong>CPF:</strong> 321.654.987-11</p>
+        <p><strong>Telefone:</strong> (31) 91234-5566</p>
+        <p><strong>Data:</strong> 17/11/2025 às 11:15</p>
+        <p><strong>Observações:</strong> <i>(Nenhuma)</i></p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Avaliação Ortodôntica</h3>
+        <p><strong>Nome:</strong> Carla Souza</p>
+        <p><strong>Telefone:</strong> (41) 99876-4455</p>
+        <p><strong>Profissional:</strong> Dr. João Lima</p>
+        <p><strong>Data:</strong> 18/11/2025 às 16:00</p>
+        <p><strong>Observações:</strong> <i>(Nenhuma)</i></p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Extração de Siso</h3>
+        <p><strong>Nome:</strong> Bruno Ferreira</p>
+        <p><strong>Telefone:</strong> (71) 91122-3344</p>
+        <p><strong>Profissional:</strong> <i>Qualquer Profissional</i></p>
+        <p><strong>Data:</strong> 19/11/2025 às 13:00</p>
+        <p><strong>Observações:</strong> Alérgico à anestesia X.</p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Revisão</h3>
+        <p><strong>Nome:</strong> Juliana Mendes</p>
+        <p><strong>Telefone:</strong> (81) 90000-7777</p>
+        <p><strong>Profissional:</strong> <i>Qualquer Profissional</i></p>
+        <p><strong>Data:</strong> 19/11/2025 às 15:30</p>
+        <p><strong>Observações:</strong> Alérgico à anestesia X.</p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-confirmar-cancelamento">Confirmar Cancelamento</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Tratamento de Cárie</h3>
+        <p><strong>Nome:</strong> Fábio Almeida</p>
+        <p><strong>Telefone:</strong> (11) 91111-2222</p>
+        <p><strong>Profissional:</strong> Dra. Carla Diniz</p>
+        <p><strong>Data:</strong> 20/11/2025 às 09:00</p>
+        <p><strong>Observações:</strong> <i>(Nenhuma)</i></p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-cancelar">Cancelar</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Manutenção de Aparelho</h3>
+        <p><strong>Nome:</strong> Tiago Rocha</p>
+        <p><strong>Telefone:</strong> (61) 98888-9999</p>
+        <p><strong>Profissional:</strong> <i>Qualquer Profissional</i></p>
+        <p><strong>Data:</strong> 21/11/2025 às 14:30</p>
+        <p><strong>Observações:</strong> Colocar borrachinhas azuis.</p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-confirmar-cancelamento">Confirmar Cancelamento</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+      <div class="agendamento">
+        <h3>Limpeza Dental</h3>
+        <p><strong>Nome:</strong> Vanessa Prado</p>
+        <p><strong>Telefone:</strong> (51) 95555-8888</p>
+        <p><strong>Profissional:</strong> <i>Qualquer Profissional</i></p>
+        <p><strong>Data:</strong> 22/11/2025 às 08:00</p>
+        <p><strong>Observações:</strong> <i>(Nenhuma)</i></p>
+        <div class="botoes">
+          <a href="#modal" class="btn btn-c btn-confirmar-cancelamento">Confirmar Cancelamento</a>
+          <a href="../relatorios/relatorio.html" class="btn btn-r btn-gerar-relatorio">Gerar relatório</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modal de cancelamento -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Confirmar Cancelamento</h3>
+      <p>Tem certeza que deseja cancelar essa consulta?</p>
+      <button class="btn-confirmar" id="btnConfirmar">Confirmar</button>
+      <a href="#" class="fechar" id="fecharModal">Fechar</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Clínica Team Digital Smile — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../../script/search.js"></script>
+</body>
+
+</html>
