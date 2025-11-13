@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lista de Profissionais</title>
+  <link rel="stylesheet" href="../../../../assets/css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lista de Profissionais</h1>
+  </header>
+
+  <div class="container">
+    <input type="text" id="busca" class="search" placeholder="Buscar por nome ou especialidade...">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Especialidade</th>
+          <th>Telefone</th>
+          <th>CRO</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="listaProfissionais"></tbody>
+    </table>
+
+    <div class="navegar">
+      <a href="../CRUD-profissionais/manter_profissionais.html">← Voltar ao cadastro</a> <br>
+      <a href="../../../inicio_recepcao.html">← Voltar ao início</a>
+    </div>
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
