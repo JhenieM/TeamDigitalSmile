@@ -5,6 +5,10 @@
     font-family: 'Archivo', Arial, sans-serif;
 }
 
+:root {
+    --azul-claro: #007bff;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
