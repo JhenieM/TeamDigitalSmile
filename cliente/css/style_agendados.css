@@ -1,153 +1,195 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #eaf3ff 0%, #f8fbff 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background: #2d6bb2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+.agendamento {
+    width: 540px;
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.agendamento:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.agendamento h3 {
+    color: #2d6bb2;
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+}
+.agendamento p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.agendamento strong {
     color: #333;
 }
-
-header {
-    background: #0077b6;
-    color: #fff;
-    padding: 16px;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-    font-size: 1.6rem;
-}
-
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.buscar {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.buscar input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.buscar button {
-    background: #0077b6;
-    border: none;
-    color: #fff;
-    border-radius: 6px;
-    padding: 10px 18px;
-    cursor: pointer;
-}
-
-.agendamento {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 15px;
-}
-
-.agendamento h3 {
-    margin-top: 0;
-    color: #0077b6;
-}
-
-.agendamento p {
-    margin: 4px 0;
-}
-
 .botoes {
-    margin-top: 12px;
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
 }
-
 .btn {
-    border: none;
-    border-radius: 6px;
-    padding: 8px 14px;
-    cursor: pointer;
-    color: #fff;
+    text-decoration: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn-cancelar {
-    background: #e63946;
+    background: #dc3545;
+    color: white;
 }
-
+.btn-cancelar:hover {
+    background: #b02a37;
+}
 .btn-pagar {
-    background: #2a9d8f;
+    background: #28a745;
+    color: white;
 }
-
-.modal, .pagamento {
-    background: rgba(0,0,0,0.6);
+.btn-pagar:hover {
+    background: #1f7a34;
+}
+.btn-voltar {
+    display: inline-block;
+    background: #2d6bb2;
+    color: white;
+    margin: 1.8rem auto;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+.btn-voltar:hover {
+    background: #1d4e80;
+    transform: translateY(-2px);
+}
+/* MODAIS */
+.modal,
+.pagamento {
     position: fixed;
     inset: 0;
-    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
+    z-index: 10;
 }
 
 .modal:target,
 .pagamento:target {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
 }
 
 .modal-content {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
+    background: white;
+    padding: 2rem;
+    border-radius: 14px;
+    max-width: 320px;
     width: 90%;
-    max-width: 350px;
     text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s ease;
+}
+.modal-content h3 {
+    color: #2d6bb2;
+    margin-bottom: 0.8rem;
+}
+.modal-content p {
+    color: #555;
+    margin-bottom: 0.8rem;
 }
 
 .modal-content input {
-    margin-top: 10px;
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccd7e0;
+    margin: 0.6rem 0;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
 }
-
+.modal-content input:focus {
+    border-color: #2d6bb2;
+    outline: none;
+}
+.btn-confirmar,
+.btn-pagar-now {
+    display: inline-block;
+    background: #2d6bb2;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.btn-confirmar:hover,
+.btn-pagar-now:hover {
+    background: #1d4e80;
+}
 .fechar {
     display: inline-block;
-    margin-top: 15px;
-    background: #ccc;
-    padding: 6px 12px;
-    border-radius: 6px;
+    margin-top: 0.8rem;
+    color: #2d6bb2;
     text-decoration: none;
-    color: #000;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.btn-confirmar {
-    background: #e63946;
-    color: #fff;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    margin-top: 10px;
-    cursor: pointer;
+.fechar:hover {
+    text-decoration: underline;
 }
 
-.btn-pagar-now {
-    background: #2a9d8f;
-    color: #fff;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    margin-top: 10px;
-    cursor: pointer;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+.agendamento {
+    display: none;
 }

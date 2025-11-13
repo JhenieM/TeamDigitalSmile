@@ -1,84 +1,118 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #007bff, #00bcd4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
+  margin: 0;
+  background: #f2f6fc;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .box {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 340px;
-    animation: aparecer 0.5s ease;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+  margin: 25px;
 }
-@keyframes aparecer {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
 h2 {
-    color: #007bff;
-    margin-bottom: 1rem;
+  color: #0078d7;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 .info {
-    text-align: left;
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-}
-label {
-    display: block;
-    margin-top: 0.7rem;
-    text-align: left;
-    font-size: 0.9rem;
-}
-input, select {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-top: 0.2rem;
+  background: #eef5ff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0078d7;
 }
 .metodos {
-    display: flex;
-    justify-content: space-around;
-    margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1.5rem;
 }
 .metodo {
-    border: 1px solid #007bff;
-    border-radius: 8px;
-    padding: 0.5rem 0.8rem;
-    cursor: pointer;
-    transition: 0.3s;
+  flex: 1;
+  margin: 0 5px;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #f8f9fc;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
 }
+
 .metodo:hover {
-    background: #007bff;
-    color: #fff;
+  border-color: #0078d7;
+  background: #e6f0ff;
+  color: #0078d7;
+  font-weight: 500;
+}
+
+.dados-cartao {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  color: #444;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0078d7;
+  box-shadow: 0 0 0 2px rgba(0, 120, 215, 0.15);
 }
 .btn {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-    background: #28a745;
-    color: white;
-    padding: .7rem;
-    border-radius: 6px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
 }
+
 .btn:hover {
-    background: #218838;
+  background: #005fa3;
 }
+
 .voltar {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 1.2rem;
+  text-decoration: none;
+  color: #0078d7;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.voltar:hover {
+  color: #005fa3;
 }
