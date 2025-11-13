@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas Registradas - Dentista</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../../assets/css/global.css">
+</head>
+<body>
+  <header>
+    <h1>Consultas Registradas</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="top-bar">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Pesquisar por nome ou CPF..." onkeyup="filtrarConsultas()">
+          <span class="search-icon">🔍</span>
+        </div>
+        <button class="btn voltar" onclick="window.location.href='../registrar_consulta.html'">← Voltar</button>
+      </div>
+
+      <table id="tabelaConsultas">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>CPF</th>
+            <th>Data</th>
+            <th>Procedimento</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maria Oliveira</td>
+            <td>123.456.789-00</td>
+            <td>2025-11-01</td>
+            <td>Limpeza</td>
+            <td><button class="btn ver" onclick="window.location.href='../../recepcao/sections/paciente/relatorios/relatorio.html'">Ver Relatório</button></td>
+          </tr>
+          <tr>
+            <td>João Pereira</td>
+            <td>987.654.321-00</td>
+            <td>2025-11-03</td>
+            <td>Canal</td>
+            <td><button class="btn ver" onclick="window.location.href='../../recepcao/sections/paciente/relatorios/relatorio.html'">Ver Relatório</button></td>
+          </tr>
+          <tr>
+            <td>Camila Souza</td>
+            <td>555.777.888-22</td>
+            <td>2025-11-05</td>
+            <td>Extração</td>
+            <td><button class="btn ver" onclick="window.location.href='../../recepcao/sections/paciente/relatorios/relatorio.html'">Ver Relatório</button></td>
+          </tr>
+          <tr>
+            <td>Lucas Martins</td>
+            <td>222.333.444-55</td>
+            <td>2025-11-06</td>
+            <td>Consulta de Rotina</td>
+            <td><button class="btn ver" onclick="window.location.href='../../recepcao/sections/paciente/relatorios/relatorio.html'">Ver Relatório</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clínica Team Digital Smile — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function filtrarConsultas() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const linhas = document.querySelectorAll('#tabelaConsultas tbody tr');
+
+      linhas.forEach(linha => {
+        linha.style.display = linha.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
