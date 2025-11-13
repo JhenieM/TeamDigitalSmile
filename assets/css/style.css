@@ -22,7 +22,8 @@ nav a {
 }
 
 .hero {
-  height: 100dvh;
+  position: relative;
+  height: calc(100dvh - 68px);
   background: #21376D;
   background: radial-gradient(circle, #21376d 0%, #1e4077 43%, #1a4c85 100%);
   /* background: #213570; */
@@ -52,6 +53,32 @@ nav a {
 
 .btn:hover {
   background: #366a9b;
+}
+
+.img-seta {
+  position: absolute;
+  bottom: 30px; /* distância do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.img-seta img {
+  width: 40px;
+  height: auto;
+  opacity: 0.8;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+/* Animação suave de sobe e desce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -15px);
+  }
 }
 
 section {
